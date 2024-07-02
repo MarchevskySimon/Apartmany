@@ -357,7 +357,7 @@ footer a {
   }
 }
 @media only screen and (max-height: 550px) {
-  /* .menubox {
+  .menubox {
     height: 110vh;
   }
   .menubox ul {
@@ -366,6 +366,15 @@ footer a {
   }
   .menubox div {
     margin: 0 0 0 1rem;
+  }
+  .menubox h5 {
+    font-size: 1rem;
+  }
+  .menubox li {
+    font-size: 0.8rem;
+  }
+  .menubox a {
+    font-size: 0.8rem;
   }
   .ul-apartmany {
     padding: 0 0 0 1rem;
@@ -376,22 +385,5 @@ footer a {
     padding: 0 0 0 1rem;
     border-top: 0;
     border-left: 2px solid #c4416b;
-  } */
-  .menubox div {
-    margin-bottom: 0.5rem;
-    padding-top: 1rem;
-  }
-  .menubox h5 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  .menubox li {
-    margin-bottom: 1rem;
-  }
-  .menubox li a {
-    font-size: 0.8rem;
-  }
-  .menubox li {
-    font-size: 0.7rem;
   }
 }
