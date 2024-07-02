@@ -46,7 +46,6 @@ nav svg:hover {
 .menubox {
   position: fixed;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -54,18 +53,38 @@ nav svg:hover {
   top: 0;
   left: -100%;
   background-color: #b02e57;
-  transition: 1s;
+  transition: 0.5s;
 }
 .menubox li {
+  margin-bottom: 1rem;
+  color: white;
+}
+.menubox h5 {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: white;
 }
 .menubox a {
   font-size: 1.2rem;
-  font-weight: 700;
   color: white;
 }
-.menubox span {
+.menubox a:hover {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid white;
+}
+.ul-apartmany {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #c4416b;
+}
+.ul-apartmany li {
+  margin-bottom: 2rem;
+}
+.ul-numbers {
+  padding-top: 2rem;
+  border-top: 2px solid #c4416b;
+}
+.ul-numbers li {
   font-weight: 200;
 }
 /* 
@@ -108,7 +127,7 @@ header h1 {
   /* font-weight: 700; */
   padding: 1rem 4rem;
   color: white;
-  background-color: #cf416e;
+  background-color: #c4416b;
   border-radius: 50px;
   transition: 0.2s;
 }
@@ -135,12 +154,28 @@ header h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 95%;
   margin: auto;
   padding: 2rem 0;
 }
 .section-about-header h1 {
   font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  background-color: #c4416b;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0px -8px 8px 0 rgba(0, 0, 0, 0.7);
+}
+h1 svg {
+  width: 40px;
+  transition: 0.2s;
+}
+.section-about-header h1:hover {
+  cursor: pointer;
 }
 .section-about-text {
   width: 80%;
@@ -149,13 +184,6 @@ header h1 {
   height: 0vh;
   overflow: hidden;
 }
-.section-about-header svg {
-  width: 3rem;
-  transition: 0.5s;
-}
-/* .section-about-text:hover {
-  height: auto;
-} */
 .section-about-text h2 {
   margin: 2rem 0;
 }
@@ -314,5 +342,36 @@ footer a {
   }
   .footer-links li {
     margin: 1.5rem 0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  header h1 {
+    font-size: 11vw;
+  }
+
+  .section-about-header h1 {
+    font-size: 3vw;
+  }
+  .section-about-header svg {
+    width: 30px;
+  }
+}
+@media only screen and (max-height: 550px) {
+  .menubox ul {
+    display: flex;
+    margin-top: 3rem;
+  }
+  .menubox div {
+    margin: 0 0 0 1rem;
+  }
+  .ul-apartmany {
+    padding: 0 0 0 1rem;
+    border-top: 0;
+    border-left: 2px solid #c4416b;
+  }
+  .ul-numbers {
+    padding: 0 0 0 1rem;
+    border-top: 0;
+    border-left: 2px solid #c4416b;
   }
 }

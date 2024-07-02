@@ -44,15 +44,16 @@ document.addEventListener("keyup", function (ele) {
 let boolSection = false;
 var section = document.getElementById("sectionText");
 var button = document.getElementById("button");
+var buttonSvg = document.getElementById("button-svg");
 
 button.addEventListener("click", function () {
   if (boolSection === false) {
     section.style.height = "auto";
-    button.style.transform = "rotate(180deg)";
+    buttonSvg.style.transform = "rotate(180deg)";
     boolSection = Boolean(true);
   } else {
     section.style.height = "0";
-    button.style.transform = "rotate(0)";
+    buttonSvg.style.transform = "rotate(0)";
     boolSection = Boolean(false);
   }
 });
