@@ -357,6 +357,9 @@ footer a {
   }
 }
 @media only screen and (max-height: 550px) {
+  .menubox {
+    height: 110vh;
+  }
   .menubox ul {
     display: flex;
     margin-top: 3rem;
