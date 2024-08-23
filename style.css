@@ -10,6 +10,9 @@
   text-decoration: none;
   font-size: 1rem;
 }
+html {
+  scroll-behavior: smooth;
+}
 .darker {
   position: absolute;
   width: 100%;
@@ -87,7 +90,7 @@ nav svg:hover {
 .ul-numbers li {
   font-weight: 200;
 }
-/* 
+/*
  * HEADER
  */
 header {
@@ -98,9 +101,10 @@ header {
   align-items: center;
   justify-content: center;
 
-  background-image: url("img/bci.jpg");
+  background-image: url("img/bardejov.jpg");
   background-size: cover;
-  background-position-x: center;
+  /* background-position-x: center; */
+  background-position: center;
   background-attachment: fixed;
 }
 header h1 {
@@ -125,7 +129,7 @@ header h1 {
 }
 .text a {
   /* font-weight: 700; */
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   color: white;
   background-color: #c4416b;
   border-radius: 50px;
@@ -150,37 +154,34 @@ header h1 {
   box-shadow: 0px -8px 8px 0 rgba(0, 0, 0, 0.7);
 }
 .section-about-header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 95%;
-  margin: auto;
-  padding: 2rem 0;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
 }
 .section-about-header h1 {
   font-size: 2vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  color: white;
-  background-color: #c4416b;
+  color: #c4416b;
+}
+.section-about-header p {
+  line-height: 2rem;
+  margin: 3rem 0 4rem 0;
+}
+.section-about-header span {
+  border: 1px solid #c4416b;
+  color: #c4416b;
   padding: 1rem 2rem;
   border-radius: 50px;
-  box-shadow: 0px -8px 8px 0 rgba(0, 0, 0, 0.7);
-}
-h1 svg {
-  width: 40px;
   transition: 0.2s;
 }
-.section-about-header h1:hover {
+.section-about-header span:hover {
   cursor: pointer;
+  background-color: #c4416b;
+  color: white;
 }
 .section-about-text {
   width: 80%;
-  margin: auto;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
   height: 0vh;
   overflow: hidden;
 }
@@ -198,7 +199,7 @@ section {
   flex-direction: column;
   padding: 0.2rem 2rem 5rem 2rem;
 }
-section:hover a {
+section a:hover {
   color: black;
   background-color: white;
 }
@@ -220,8 +221,22 @@ section h1 {
   font-weight: 300;
   color: white;
 }
-.section-text {
+/* .section-text {
   margin-top: 2rem;
+} */
+.section-text li {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  color: white;
+}
+.section-text svg {
+  width: 1rem;
+  margin-right: 1rem;
+}
+
+.section-text svg {
+  width: 1rem;
 }
 .section-text h5 {
   font-size: 1.2rem;
@@ -233,7 +248,8 @@ section h1 {
   color: white;
 }
 p span {
-  padding: 0 2rem;
+  font-weight: 700;
+  /* padding: 0 2rem; */
 }
 .overline {
   position: absolute;
@@ -270,18 +286,48 @@ p span {
 }
 .gallery {
   position: relative;
-  margin-bottom: 4rem;
+  margin: 1rem 0;
+}
+.gallery span {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  top: 0;
+  padding: 0 1rem;
+}
+.gallery span:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+.gallery span svg {
+  width: 3rem;
+}
+.left-arrow {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  left: -2rem;
+}
+.right-arrow {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  right: -2rem;
 }
 .gallery img {
-  max-width: 50vw;
-  margin: 1rem;
-  box-shadow: 0px -8px 8px 0 rgba(0, 0, 0, 0.7);
+  max-width: 40vw;
+  height: 30vw;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  /* box-shadow: 0px -8px 8px 0 rgba(0, 0, 0, 0.7); */
 }
 .slider-wrapper {
   display: flex;
   align-items: center;
   overflow-x: auto;
   scrollbar-width: none;
+  width: 90%;
+  margin: auto;
+  border-radius: 1rem;
+  scroll-behavior: smooth;
 }
 
 /* FOOTER */
@@ -298,6 +344,11 @@ footer h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+footer p {
+  margin: 1rem 0 2rem 0;
+  text-align: center;
+  line-height: 2rem;
+}
 footer ul {
   display: flex;
   align-items: center;
@@ -311,7 +362,12 @@ footer svg {
   margin-right: 1rem;
 }
 footer a {
+  padding-bottom: 0.5rem;
   color: black;
+  border-bottom: 1px solid #c4416b;
+}
+footer a:hover {
+  color: #c4416b;
 }
 
 .footer-booking a {
@@ -331,6 +387,9 @@ footer a {
  */
 @media only screen and (max-width: 850px) {
   footer h1 {
+    margin-bottom: 1rem;
+  }
+  footer p {
     margin-bottom: 3rem;
   }
   footer ul {
@@ -338,7 +397,7 @@ footer a {
     margin: 0;
   }
   footer li {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   .footer-links li {
     margin: 1.5rem 0;
@@ -350,10 +409,33 @@ footer a {
   }
 
   .section-about-header h1 {
-    font-size: 3vw;
+    font-size: 1.2rem;
   }
   .section-about-header svg {
     width: 30px;
+  }
+
+  .section-header {
+    flex-direction: column;
+  }
+  .section-header h1 {
+    text-align: center;
+    line-height: 2rem;
+    margin: 1rem 0;
+  }
+  .section-text p {
+    text-align: center;
+  }
+
+  .gallery img {
+    max-width: 100%;
+    height: 25rem;
+  }
+  .gallery span {
+    padding: 0 0.5rem;
+  }
+  .gallery span svg {
+    width: 2rem;
   }
 }
 @media only screen and (max-height: 550px) {

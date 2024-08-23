@@ -44,16 +44,52 @@ document.addEventListener("keyup", function (ele) {
 let boolSection = false;
 var section = document.getElementById("sectionText");
 var button = document.getElementById("button");
-var buttonSvg = document.getElementById("button-svg");
 
 button.addEventListener("click", function () {
   if (boolSection === false) {
     section.style.height = "auto";
-    buttonSvg.style.transform = "rotate(180deg)";
+    section.style.paddingBottom = "2rem";
     boolSection = Boolean(true);
   } else {
     section.style.height = "0";
-    buttonSvg.style.transform = "rotate(0)";
+    section.style.paddingBottom = "0";
     boolSection = Boolean(false);
   }
 });
+
+/*
+ * Gallery slider
+ */
+
+let galleryImage = document.getElementsByClassName("gallery-img");
+let imgWidth = galleryImage[0].offsetWidth;
+
+const slider = document.getElementsByClassName("slider-wrapper");
+const arrowRight = document.getElementsByClassName("right-arrow");
+const arrowLeft = document.getElementsByClassName("left-arrow");
+
+for (let i = 0; i < arrowRight.length; i++) {
+  arrowRight[i].addEventListener("click", function () {
+    if (arrowRight[i].parentElement.parentElement.className === "suk-dom") {
+      slider[0].scrollLeft += imgWidth;
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+      slider[1].scrollLeft += imgWidth;
+    } else {
+      slider[2].scrollLeft += imgWidth;
+    }
+  });
+}
+
+for (let i = 0; i < arrowLeft.length; i++) {
+  arrowLeft[i].addEventListener("click", function () {
+    if (arrowLeft[i].parentElement.parentElement.className === "suk-dom") {
+      slider[0].scrollLeft -= imgWidth;
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+      slider[1].scrollLeft -= imgWidth;
+    } else {
+      slider[2].scrollLeft -= imgWidth;
+    }
+  });
+}
