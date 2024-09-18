@@ -75,8 +75,14 @@ for (let i = 0; i < arrowRight.length; i++) {
     }
     if (arrowRight[i].parentElement.parentElement.className === "leyla") {
       slider[1].scrollLeft += imgWidth;
-    } else {
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
       slider[2].scrollLeft += imgWidth;
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+      slider[3].scrollLeft += imgWidth;
+    } else {
+      slider[4].scrollLeft += imgWidth;
     }
   });
 }
@@ -88,8 +94,14 @@ for (let i = 0; i < arrowLeft.length; i++) {
     }
     if (arrowRight[i].parentElement.parentElement.className === "leyla") {
       slider[1].scrollLeft -= imgWidth;
-    } else {
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
       slider[2].scrollLeft -= imgWidth;
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+      slider[3].scrollLeft -= imgWidth;
+    } else {
+      slider[4].scrollLeft -= imgWidth;
     }
   });
 }

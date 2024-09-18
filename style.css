@@ -68,7 +68,6 @@ nav svg:hover {
   color: white;
 }
 .menubox a {
-  font-size: 1.2rem;
   color: white;
 }
 .menubox a:hover {
@@ -190,6 +189,7 @@ header h1 {
 }
 .section-about-text p {
   line-height: 250%;
+  margin-bottom: 1rem;
 }
 
 section {
@@ -221,31 +221,17 @@ section h1 {
   font-weight: 300;
   color: white;
 }
-/* .section-text {
-  margin-top: 2rem;
-} */
-.section-text li {
-  display: flex;
-  align-items: center;
+.section-text {
   margin: 1rem 0;
-  color: white;
 }
-.section-text svg {
-  width: 1rem;
-  margin-right: 1rem;
+.section-text li {
+  font-weight: 200;
+  line-height: 200%;
+  margin: 1rem 0;
+  color: #fff;
 }
-
-.section-text svg {
-  width: 1rem;
-}
-.section-text h5 {
-  font-size: 1.2rem;
-  color: white;
-  margin-bottom: 2rem;
-}
-.section-text p {
-  line-height: 2.3rem;
-  color: white;
+.section-text span {
+  font-weight: 500;
 }
 p span {
   font-weight: 700;
@@ -260,22 +246,29 @@ p span {
   border-radius: 50px 50px 0 0;
   box-shadow: 0px -8px 8px 0 rgba(0, 0, 0, 0.7);
 }
-.suk-dom {
+
+.leyla-0 {
   background-color: #c4416b;
 }
-.suk-dom .overline {
+.leyla-0 .overline {
   background-color: #c4416b;
 }
-.leyla {
+.leyla-1 {
+  background-color: #bb3861;
+}
+.leyla-1 .overline {
+  background-color: #bb3861;
+}
+.leyla-2 {
   background-color: #b02e57;
 }
-.leyla .overline {
+.leyla-2 .overline {
   background-color: #b02e57;
 }
-.DLC {
+.Dominika {
   background-color: #a81f4b;
 }
-.DLC .overline {
+.Dominika .overline {
   background-color: #a81f4b;
 }
 .armida {
@@ -283,6 +276,12 @@ p span {
 }
 .armida .overline {
   background-color: #960e39;
+}
+.s-dom {
+  background-color: #850930;
+}
+.s-dom .overline {
+  background-color: #850930;
 }
 .gallery {
   position: relative;
@@ -427,6 +426,12 @@ footer a:hover {
     text-align: center;
   }
 
+  .section-text li {
+    font-size: 0.8rem;
+  }
+  .section-text li span {
+    font-size: 0.8rem;
+  }
   .gallery img {
     max-width: 100%;
     height: 25rem;
@@ -467,5 +472,12 @@ footer a:hover {
     padding: 0 0 0 1rem;
     border-top: 0;
     border-left: 2px solid #c4416b;
+  }
+
+  .section-text li {
+    font-size: 0.8rem;
+  }
+  .section-text li span {
+    font-size: 0.8rem;
   }
 }
