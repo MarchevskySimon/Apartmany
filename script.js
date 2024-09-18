@@ -70,38 +70,46 @@ const arrowLeft = document.getElementsByClassName("left-arrow");
 
 for (let i = 0; i < arrowRight.length; i++) {
   arrowRight[i].addEventListener("click", function () {
-    if (arrowRight[i].parentElement.parentElement.className === "suk-dom") {
+    if (arrowRight[i].parentElement.parentElement.className === "leyla-0") {
       slider[0].scrollLeft += imgWidth;
     }
-    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+    if (arrowRight[i].parentElement.parentElement.className === "leyla-1") {
       slider[1].scrollLeft += imgWidth;
     }
-    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+    if (arrowRight[i].parentElement.parentElement.className === "leyla-2") {
       slider[2].scrollLeft += imgWidth;
     }
-    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+    if (arrowRight[i].parentElement.parentElement.className === "Dominika") {
       slider[3].scrollLeft += imgWidth;
-    } else {
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "armida") {
       slider[4].scrollLeft += imgWidth;
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "s-dom") {
+      slider[5].scrollLeft += imgWidth;
     }
   });
 }
 
 for (let i = 0; i < arrowLeft.length; i++) {
   arrowLeft[i].addEventListener("click", function () {
-    if (arrowLeft[i].parentElement.parentElement.className === "suk-dom") {
+    if (arrowLeft[i].parentElement.parentElement.className === "leyla-0") {
       slider[0].scrollLeft -= imgWidth;
     }
-    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+    if (arrowRight[i].parentElement.parentElement.className === "leyla-1") {
       slider[1].scrollLeft -= imgWidth;
     }
-    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+    if (arrowRight[i].parentElement.parentElement.className === "leyla-2") {
       slider[2].scrollLeft -= imgWidth;
     }
-    if (arrowRight[i].parentElement.parentElement.className === "leyla") {
+    if (arrowRight[i].parentElement.parentElement.className === "Dominika") {
       slider[3].scrollLeft -= imgWidth;
-    } else {
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "armida") {
       slider[4].scrollLeft -= imgWidth;
+    }
+    if (arrowRight[i].parentElement.parentElement.className === "s-dom") {
+      slider[5].scrollLeft -= imgWidth;
     }
   });
 }
